@@ -1,1 +1,27 @@
-sdfsdfsdfsdfsdf
+<div class="navbar">
+	<div class="nav-inner">
+		<div class="left sliding"><a href="#" class="back link">
+		<i class="icon icon-back"></i><span>Back</span></a></div>
+		<div class="center sliding">Categories</div>
+	</div>
+	
+	<div class="pages">
+		<div data-page="bikeList" class="page">
+			<div class="page-content">
+				<div class="content-block-title">Select a category below</div>
+				<div class="list-block">
+					<ul>{{#each this}}
+						<li>
+							<a href="detail.html" class="item-content item-link" 
+										data-contxt-name="bikeList.{{@index}}">
+								<div class="item-inner">
+									<div class="item-title">{{Bike}}</div>
+								</div>
+							</a>
+						</li>{{/each}}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
