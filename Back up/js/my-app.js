@@ -20,7 +20,7 @@ var $$ = Dom7;
 function getBikes(){
 		$$.getJSON('Bike.json', function(json){
 			myApp.template7Data.bikelist = json;
- 			//console.log("Crisly Domingos"); 
+ 			/* console.log("Crisly Domingos"); */
 		});
 };
 

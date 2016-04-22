@@ -52,14 +52,12 @@ function save()
 		 if (e == QUOTE_EXCEEDED_ERR)
 		{
 			console.log("Error: Local Storage limit exceeded.");
-			alert("Error: Local Storage limit exceeded.");
-			localStorage.clear();
+			/* alert("Error: Local Storage limit exceeded."); */
 		}
 		else
 		{
 			consol.log("Error: Saving to Local Storage.");
 			alert("Error: Saving to Local Storage.");
-			localStorage.clear();
 		}
 	}
 }
@@ -118,4 +116,20 @@ function clearStorage() {
 		alert("You canceled the process of clearing data storage. Thanks");
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

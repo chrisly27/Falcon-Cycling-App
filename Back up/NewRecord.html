@@ -8,9 +8,9 @@
 	<div data-page="Safety" class="page">
 	<div class="content-block-inner">
 		<table align="center">
-			<tr><td>Name:</td><td><input type="text" id="name"></label></td></tr>
+			<tr><td>Name:</td><td><input type="text" id="name"></td></tr>
 			<tr><td>Email:</td><td><input type="text" id="email"></tr>
-			<tr><td>&nbsp;</td></tr>
+			<tr><td>&nbsp;</td></tr><!-- <tr><td>&nbsp;</td></tr> -->
 			<tr><td>Pads:</td><td><input type="text" id="pads"></tr>
 			<tr><td>Brakes:</td><td><input type="text" id="brakes"></tr>
 			<tr><td>Tires:</td><td><input type="text" id="tires"></tr>
@@ -22,11 +22,13 @@
 			<tr><td>Chainsets:</td><td><input type="text" id="chainsets"></tr>
 			<tr><td>Cassettes:</td><td><input type="text" id="cassettes"></tr>
 			<tr><td>Frame:</td><td><input type="text" id="Frame"></tr>
-			
-			<td>&nbsp;</td>
-        <td><input type="button" id="get" value="Get from Storage" onclick="Javascript:request()"></td>
 		
-		
+			<tr><td>&nbsp;</td></tr>
+
+			<tr>
+				<td>&nbsp;</td>
+				<td><a href="index.html"><input type="button" id="add" value="Add to Storage" onclick="Javascript:save()"></a></td>
+			</tr>
 		</table>
 	</div>
 	</div>
