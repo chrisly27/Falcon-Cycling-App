@@ -43,20 +43,24 @@ function save()
 		chainsets.value = "";
 		cassettes.value = "";
 		Frame.value = "";
+		
+		Console.log("Successfully Saved Data to the local storage.")
+		alert("Your data was saved successfully.");
 	}
 	catch (e)
 	{
-		if (e == QUOTE_EXCEEDED_ERR)
+		 if (e == QUOTE_EXCEEDED_ERR)
 		{
 			console.log("Error: Local Storage limit exceeded.");
+			/* alert("Error: Local Storage limit exceeded."); */
 		}
 		else
 		{
 			consol.log("Error: Saving to Local Storage.");
+			alert("Error: Saving to Local Storage.");
 		}
+		return false;
 	}
-	
-	console.log("Successfully Saved Data to the local storage.")
 }
 
 
@@ -65,9 +69,7 @@ function save()
 
 
 function request()
-{
-	console.log("Getting your data from local storage");
-	
+{	
 	var name = document.getElementById("name");
 	var email = document.getElementById("email");
 	var pads = document.getElementById("pads");
@@ -95,11 +97,25 @@ function request()
 	chainsets.value = localStorage.getItem("chainsets", chainsets.value);
 	cassettes.value = localStorage.getItem("cassettes", cassettes.value);
 	Frame.value = localStorage.getItem("Frame", Frame.value);
+	
+	console.log("Getting your data from local storage");
+	alert("Your data was successfully requested from data storage.");
 }
 
 function clearStorage() {
     console.log("Clearing local storage.");
-    localStorage.clear();
+	
+	var r = confirm("Are you sure you want to dele data from data storage??");
+	
+	if (r == true)
+	{
+		localStorage.clear();
+	}
+    /* localStorage.clear(); */
+	else
+	{
+		alert("You canceled the process of clearing data storage. Thanks");
+	}
 }
 
 
