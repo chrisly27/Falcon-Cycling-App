@@ -112,7 +112,6 @@ function clearStorage() {
 	{
 		localStorage.clear();
 	}
-    /* localStorage.clear(); */
 	else
 	{
 		alert("You canceled the process of clearing data storage. Thanks");
