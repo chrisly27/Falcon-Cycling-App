@@ -2,7 +2,9 @@ function save()
 {
 	var name = document.getElementById("name");
 	var email = document.getElementById("email");
-	var pads = document.getElementById("pads");
+	var birthday = document.getElementById("birthday");
+	
+	
 	var brakes = document.getElementById("brakes");
 	var tires = document.getElementById("tires");
 	var gears = document.getElementById("gears");
@@ -10,15 +12,15 @@ function save()
 	var wheel = document.getElementById("wheel");
 	var mudguard = document.getElementById("mudguard");
 	var handlebars = document.getElementById("handlebars");
-	var chainsets = document.getElementById("chainsets");
-	var cassettes = document.getElementById("cassettes");
 	var Frame = document.getElementById("Frame");
 	
 	try
 	{
 		localStorage.setItem("name", name.value);
 		localStorage.setItem("email", email.value);
-		localStorage.setItem("pads", pads.value);
+		localStorage.setItem("birthday", birthday.value);
+		
+		
 		localStorage.setItem("brakes", brakes.value);
 		localStorage.setItem("tires", tires.value);
 		localStorage.setItem("gears", gears.value);
@@ -26,13 +28,13 @@ function save()
 		localStorage.setItem("wheel", wheel.value);
 		localStorage.setItem("mudguard", mudguard.value);
 		localStorage.setItem("handlebars", handlebars.value);
-		localStorage.setItem("chainsets", chainsets.value);
-		localStorage.setItem("cassettes", cassettes.value);
 		localStorage.setItem("Frame", Frame.value);
 		
 		name.value = "";
 		email.value = "";
-		pads.value = "";
+		birthday.value = "";
+		
+		
 		brakes.value = "";
 		tires.value = "";
 		gears.value = "";
@@ -40,8 +42,6 @@ function save()
 		wheel.value = "";
 		mudguard.value = "";
 		handlebars.value = "";
-		chainsets.value = "";
-		cassettes.value = "";
 		Frame.value = "";
 		
 		Console.log("Successfully Saved Data to the local storage.")
@@ -73,7 +73,9 @@ function request()
 {	
 	var name = document.getElementById("name");
 	var email = document.getElementById("email");
-	var pads = document.getElementById("pads");
+	var birthday = document.getElementById("birthday");
+	
+	
 	var brakes = document.getElementById("brakes");
 	var tires = document.getElementById("tires");
 	var gears = document.getElementById("gears");
@@ -81,13 +83,13 @@ function request()
 	var wheel = document.getElementById("wheel");
 	var mudguard = document.getElementById("mudguard");
 	var handlebars = document.getElementById("handlebars");
-	var chainsets = document.getElementById("chainsets");
-	var cassettes = document.getElementById("cassettes");
 	var Frame = document.getElementById("Frame");
 	
 	name.value = localStorage.getItem("name", name.value);
 	email.value = localStorage.getItem("email", email.value);
-	pads.value = localStorage.getItem("pads", pads.value);
+	birthday.value = localStorage.getItem("birthday", birthday.value);
+	
+	
 	brakes.value = localStorage.getItem("brakes", brakes.value);
 	tires.value = localStorage.getItem("tires", tires.value);
 	gears.value = localStorage.getItem("gears", gears.value);
@@ -95,8 +97,6 @@ function request()
 	wheel.value = localStorage.getItem("wheel", wheel.value);
 	mudguard.value = localStorage.getItem("mudguard", mudguard.value);
 	handlebars.value = localStorage.getItem("handlebars", handlebars.value);
-	chainsets.value = localStorage.getItem("chainsets", chainsets.value);
-	cassettes.value = localStorage.getItem("cassettes", cassettes.value);
 	Frame.value = localStorage.getItem("Frame", Frame.value);
 	
 	console.log("Getting your data from local storage");
