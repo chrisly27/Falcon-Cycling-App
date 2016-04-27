@@ -15,7 +15,6 @@ var myApp = new Framework7({
 // Export selectors engine
 var $$ = Dom7;
 
-
 //load the bike JSON file and add to the bikList dataset
 function getBikes(){
 		$$.getJSON('Bike.json', function(json){
