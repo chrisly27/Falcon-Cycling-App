@@ -13,9 +13,74 @@ function save()
 	
 	try
 	{
-
-		
-		localStorage.setItem("name", name.value);
+			if($('#brakes').prop('checked'))
+			{
+				localStorage.setItem("brakes", brakes.value);
+			}
+			else 
+			{
+				localStorage.setItem("brakes", " ");
+			}
+			
+			if($('#tires').prop('checked'))
+			{
+				localStorage.setItem("tires", tires.value);
+			}
+			else 
+			{
+				localStorage.setItem("tires", " ");
+			}
+			
+			if($('#gears').prop('checked'))
+			{
+				localStorage.setItem("gears", gears.value);
+			}
+			else 
+			{
+				localStorage.setItem("gears", " ");
+			}
+			
+			if($('#seats').prop('checked'))
+			{
+				localStorage.setItem("seats", seats.value);
+			}
+			else 
+			{
+				localStorage.setItem("seats", " ");
+			}
+			
+			if($('#wheels').prop('checked'))
+			{
+				localStorage.setItem("wheels", wheels.value);
+			}
+			else 
+			{
+				localStorage.setItem("wheels", " ");
+			}
+			
+			if($('#mudguard').prop('checked'))
+			{
+				localStorage.setItem("mudguard", mudguard.value);
+			}
+			else 
+			{
+				localStorage.setItem("mudguard", " ");
+			}
+			
+			
+			if($('#handlebars').prop('checked'))
+			{
+				localStorage.setItem("handlebars", handlebars.value);
+			}
+			else
+			{
+				localStorage.setItem("handlebars", " ");
+			}
+			
+			localStorage.setItem("name", name.value);
+			localStorage.setItem("email", email.value);
+			localStorage.setItem("birthday", birthday.value);
+		/* localStorage.setItem("name", name.value);
 		localStorage.setItem("email", email.value);
 		localStorage.setItem("birthday", birthday.value);
 		localStorage.setItem("brakes", brakes.value);
@@ -24,7 +89,7 @@ function save()
 		localStorage.setItem("seats", seats.value);
 		localStorage.setItem("wheels", wheels.value);
 		localStorage.setItem("mudguard", mudguard.value);
-		localStorage.setItem("handlebars", handlebars.value);
+		localStorage.setItem("handlebars", handlebars.value); */
 		
 		name.value = "";
 		email.value = "";
@@ -37,16 +102,17 @@ function save()
 		mudguard.value = "";
 		handlebars.value = "";
 		
-		/* Console.log("Successfully Saved Data to the local storage.") */
+		Console.log("Successfully Saved Data to the local storage.")
 		alert("Your data was saved successfully.");
 	}
 	catch (e)
 	{
-		 if (e == QUOTE_EXCEEDED_ERR)
+		if (e == QUOTE_EXCEEDED_ERR)
 		{
-			console.log("Error: Local Storage limit exceeded.");
 			alert("Error: Local Storage limit exceeded.");
 			localStorage.clear();
+			console.log("Error: Local Storage limit exceeded.");
+			
 		}
 		else
 		{

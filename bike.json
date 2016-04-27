@@ -7,7 +7,8 @@
 		"Pedals": "Shimano M530 MTB",
 		"Brakes": "Calliper 57mm",
 		"Price": "£449.99",
-		"Description": "Mountain Bike is the sport of riding bicycles off-road, often over rough terrain, using specially designed for mountain which shares other similarities with other bikes but incorporate features designed to enhace durability and performance in rough terrain. Mountain biking can be performed almost anywhere from a back yard to a gravel road, but the majority of mountain bikers ride off-road trails, whether country back roads, fire roads, or singletrack (narrow trails that wind through forests, mountains, deserts, or fields)"
+		"Description": "Mountain Bike is the sport of riding bicycles off-road, often over rough terrain, using specially designed for mountain which shares other similarities with other bikes but incorporate features designed to enhace durability and performance in rough terrain. Mountain biking can be performed almost anywhere from a back yard to a gravel road, but the majority of mountain bikers ride off-road trails, whether country back roads, fire roads, or singletrack (narrow trails that wind through forests, mountains, deserts, or fields)",
+		"image": "mountain.jpg"
 	},
 	{
 		"id": 2,
@@ -17,7 +18,8 @@
 		"Pedals": "Shimano M424 SPD",
 		"Brakes": "Shimano Alivio T4000 V-Brake",
 		"Price": "£299.99",
-		"Description": "Hybrid bicycles blend characteristics from more specialized road bikes, touring bikes and mountain bikes. The resulting is a general-purpose bike that can tolerate a wide range of riding conditions and applications. Their stability, comfort and ease of use make them popular with novice cyclists, casual riders, commuters, and children."
+		"Description": "Hybrid bicycles blend characteristics from more specialized road bikes, touring bikes and mountain bikes. The resulting is a general-purpose bike that can tolerate a wide range of riding conditions and applications. Their stability, comfort and ease of use make them popular with novice cyclists, casual riders, commuters, and children.",
+		"image": "hybrid.jpg"
 	},
 	{
 		"id": 3,
@@ -27,7 +29,8 @@
 		"Pedals": "MKS AR-2 Road Pedals",
 		"Brakes": "VINTAGE BICYCLE CENTRE PULL",
 		"Price": "£249.99",
-		"Description": "The Real Classic Ladies Bicycle - 19' is truly a retro classic ladies bike with character."
+		"Description": "The Real Classic Ladies Bicycle - 19' is truly a retro classic ladies bike with character.",
+		"image": "classic.jpg"
 	},
 	{
 		"id": 4,
@@ -37,7 +40,8 @@
 		"Pedals": "Shimano Ultegra 6800 SPD-SL",
 		"Brakes": "Shimano Tiagra 4700 Road Brake Caliper",
 		"Price": "£269.66",
-		"Description": "Road biking is a fun way to improve your fitness, meet up with new people and absorb your environs at a slower pace than possible from a speeding automobile. These bikes offer speed, agility and efficiency. "
+		"Description": "Road biking is a fun way to improve your fitness, meet up with new people and absorb your environs at a slower pace than possible from a speeding automobile. These bikes offer speed, agility and efficiency. ",
+		"image": "road.jpg"
 	},
 	{
 		"id": 5,
@@ -47,7 +51,8 @@
 		"Pedals": "System EX EM15 Cage",
 		"Brakes": "Shimano SLX M675 Disc Brake Lever",
 		"Price": "£599.99",
-		"Description": "An electric bicycle, also known as an e-bike or booster bike, is a bicycle with an integrated electric motor which can be used for propulsion. There are a great variety of e-bikes available worldwide, from e-bikes that only have a small motor to assist the rider's pedal-power (i.e., pedelecs) to somewhat more powerful e-bikes which tend closer to moped-style functionality: all, however, retain the ability to be pedalled by the rider and are therefore not electric motorcycles. E-bikes use rechargeable batteries and the lighter varieties can travel up to 25 to 32 km/h (16 to 20 mph), depending on the laws of the country in which they are sold, while the more high-powered varieties can often do in excess of 45 km/h (28 mph)."
+		"Description": "An electric bicycle, also known as an e-bike or booster bike, is a bicycle with an integrated electric motor which can be used for propulsion. There are a great variety of e-bikes available worldwide, from e-bikes that only have a small motor to assist the rider's pedal-power (i.e., pedelecs) to somewhat more powerful e-bikes which tend closer to moped-style functionality: all, however, retain the ability to be pedalled by the rider and are therefore not electric motorcycles. E-bikes use rechargeable batteries and the lighter varieties can travel up to 25 to 32 km/h (16 to 20 mph), depending on the laws of the country in which they are sold, while the more high-powered varieties can often do in excess of 45 km/h (28 mph).",
+		"image": "electric.jpg"
 	},
 	{
 		"id": 6,
@@ -57,6 +62,7 @@
 		"Pedals": "Xposure Stomp BMX Pedals",
 		"Brakes": "Tektro FX730R BMX U-Brake",
 		"Price": "£169.98",
-		"Description": "Short for bicycle motocross, BMX is a type of bike designed for dirt, street, flatland, and park rides. This is a more casual form of cycling, which riders enjoy for both pleasure and sport. BMX riding stems from Southern California in the early 1970s, and continues to grow in popularity ever since."
+		"Description": "Short for bicycle motocross, BMX is a type of bike designed for dirt, street, flatland, and park rides. This is a more casual form of cycling, which riders enjoy for both pleasure and sport. BMX riding stems from Southern California in the early 1970s, and continues to grow in popularity ever since.",
+		"image": "bmx.jpg"
 	}
 ]
