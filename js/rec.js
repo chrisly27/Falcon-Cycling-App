@@ -1,3 +1,65 @@
+function isQuotaExceeded(e) {
+  var quotaExceeded = false;
+  if (e) {
+    if (e.code) {
+      switch (e.code) {
+        case 50:
+          quotaExceeded = true;
+          break;
+        case 2000://1014:
+          // Firefox
+          if (e.name === 'NS_ERROR_DOM_QUOTA_REACHED') {
+            quotaExceeded = true;
+          }
+          break;
+      }
+    } else if (e.number === -2147024882) {
+      // Internet Explorer 8
+      quotaExceeded = true;
+    }
+  }
+  return quotaExceeded;
+}
+
+
+
+/* function appendToStorage(name, data){
+    var old = localStorage.getItem(name);
+    if(old === null) old = "";
+    localStorage.setItem(name, old + data);
+}
+
+appendToStorage('oldData', $i("textbox").value); 
+
+
+
+
+
+
+
+
+
+
+
+function addEntry() {
+    // Parse any JSON previously stored in allEntries
+    var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
+    if(existingEntries == null) existingEntries = [];
+    var entryTitle = document.getElementById("entryTitle").value;
+    var entryText = document.getElementById("entryText").value;
+    var entry = {
+        "title": entryTitle,
+        "text": entryText
+    };
+    localStorage.setItem("entry", JSON.stringify(entry));
+    // Save allEntries back to local storage
+    existingEntries.push(entry);
+    localStorage.setItem("allEntries", JSON.stringify(existingEntries));
+};
+*/
+
+
+
 function save()
 {
  	var name = document.getElementById("name");
@@ -10,6 +72,7 @@ function save()
 	var wheels = document.getElementById("wheels");
 	var mudguard = document.getElementById("mudguard");
 	var handlebars = document.getElementById("handlebars");
+	
 	
 	try
 	{
@@ -107,19 +170,19 @@ function save()
 	}
 	catch (e)
 	{
-		if (e == QUOTE_EXCEEDED_ERR)
+		if (e == isQuotaExceeded)
 		{
 			alert("Error: Local Storage limit exceeded.");
 			localStorage.clear();
 			console.log("Error: Local Storage limit exceeded.");
 			
 		}
-		else
+/* 		else
 		{
-			consol.log("Error: Saving to Local Storage.");
+			console.log("Error: Saving to Local Storage.");
 			alert("Error: Saving to Local Storage.");
 			localStorage.clear();
-		}
+		} */
 	}
 }
 
