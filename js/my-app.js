@@ -9,8 +9,9 @@ var myApp = new Framework7({
     // Enable templates auto precompilation
     precompileTemplates: true,
     // Enabled pages rendering using Template7
-    template7Pages: true
+    template7Pages: true,
     // Specify Template7 data for pages
+
   });
 // Export selectors engine
 var $$ = Dom7;

@@ -65,7 +65,33 @@ function addEntry() {
 
 function save()
 {
-	var date = document.getElementById("date");
+	
+	// Parse any JSON previously stored in allEntries
+    var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
+    if(existingEntries == null) existingEntries = [];
+    var date = document.getElementById("date").value;
+    var brakes = document.getElementById("brakes").value;
+	var chain = document.getElementById("chain").value;
+	var seats = document.getElementById("seats").value;
+	var handlebars = document.getElementById("handlebars").value;
+    var entry =
+	{
+        "date": date,
+        "brakes": brakes,
+		"chain": chain,
+		"seats": seats,
+		"handlebars": handlebars
+    };
+    localStorage.setItem("entry", JSON.stringify(entry));
+    // Save allEntries back to local storage
+    existingEntries.push(entry);
+    localStorage.setItem("allEntries", JSON.stringify(existingEntries));
+	
+	console.log("It's me again here");
+	
+	
+	
+	/* var date = document.getElementById("date");
 	var brakes = document.getElementById("brakes"); 	 
 	var seats = document.getElementById("seats");
 	var chain = document.getElementById("chain");
@@ -129,7 +155,7 @@ function save()
 			localStorage.clear();
 			console.log("Error: Local Storage limit exceeded.");
 		}
-	}
+	} */
 }
 
 
@@ -140,15 +166,63 @@ function request()
 	var seats = document.getElementById("seats");
 	var chain = document.getElementById("chain");
 	var handlebars = document.getElementById("handlebars");
-	
+
+/* 	var meClever = " "; 
+	meClever(getAllIds("date brakes seats chain handlebars")); */
+
 	date.value = localStorage.getItem("date", date.value);
-	brakes.value = localStorage.getItem("brakes", brakes.value);
+ 	brakes.value = localStorage.getItem("brakes", brakes.value);
 	seats.value = localStorage.getItem("seats", seats.value);
 	chain.value = localStorage.getItem("chain", chain.value);
 	handlebars.value = localStorage.getItem("handlebars", handlebars.value);
 	
 	alert("Your data was successfully requested from data storage.");
 }
+
+
+function getAllIds(id)
+{
+    const elementsWithId = []
+    const allElements = document.getElementsByTagName('*')
+    for(let key in allElements) {
+        if(allElements.hasOwnProperty(key)) {
+            const element = allElements[key]
+            if(element.id === id) {
+                elementsWithId.push(element)
+            }        
+        }
+    }
+    return elementsWithId
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function clearStorage() {
     console.log("Clearing local storage.");
