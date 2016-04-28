@@ -1,3 +1,6 @@
+/* 
+
+
 function isQuotaExceeded(e) {
   var quotaExceeded = false;
   if (e) {
@@ -55,22 +58,17 @@ function addEntry() {
     // Save allEntries back to local storage
     existingEntries.push(entry);
     localStorage.setItem("allEntries", JSON.stringify(existingEntries));
-};
-*/
+}; */
+
 
 
 
 function save()
 {
- 	var name = document.getElementById("name");
-	var email = document.getElementById("email");
-	var birthday = document.getElementById("birthday");
+	var date = document.getElementById("date");
 	var brakes = document.getElementById("brakes"); 	 
- 	var tires = document.getElementById("tires");
-	var gears = document.getElementById("gears");
 	var seats = document.getElementById("seats");
-	var wheels = document.getElementById("wheels");
-	var mudguard = document.getElementById("mudguard");
+	var chain = document.getElementById("chain");
 	var handlebars = document.getElementById("handlebars");
 	
 	
@@ -85,24 +83,6 @@ function save()
 				localStorage.setItem("brakes", " ");
 			}
 			
-			if($('#tires').prop('checked'))
-			{
-				localStorage.setItem("tires", tires.value);
-			}
-			else 
-			{
-				localStorage.setItem("tires", " ");
-			}
-			
-			if($('#gears').prop('checked'))
-			{
-				localStorage.setItem("gears", gears.value);
-			}
-			else 
-			{
-				localStorage.setItem("gears", " ");
-			}
-			
 			if($('#seats').prop('checked'))
 			{
 				localStorage.setItem("seats", seats.value);
@@ -112,24 +92,14 @@ function save()
 				localStorage.setItem("seats", " ");
 			}
 			
-			if($('#wheels').prop('checked'))
+			if($('#chain').prop('checked'))
 			{
-				localStorage.setItem("wheels", wheels.value);
+				localStorage.setItem("chain", chain.value);
 			}
 			else 
 			{
-				localStorage.setItem("wheels", " ");
-			}
-			
-			if($('#mudguard').prop('checked'))
-			{
-				localStorage.setItem("mudguard", mudguard.value);
-			}
-			else 
-			{
-				localStorage.setItem("mudguard", " ");
-			}
-			
+				localStorage.setItem("chain", " ");
+			}			
 			
 			if($('#handlebars').prop('checked'))
 			{
@@ -140,32 +110,15 @@ function save()
 				localStorage.setItem("handlebars", " ");
 			}
 			
-			localStorage.setItem("name", name.value);
-			localStorage.setItem("email", email.value);
-			localStorage.setItem("birthday", birthday.value);
-		/* localStorage.setItem("name", name.value);
-		localStorage.setItem("email", email.value);
-		localStorage.setItem("birthday", birthday.value);
-		localStorage.setItem("brakes", brakes.value);
-		localStorage.setItem("tires", tires.value);
-		localStorage.setItem("gears", gears.value);
-		localStorage.setItem("seats", seats.value);
-		localStorage.setItem("wheels", wheels.value);
-		localStorage.setItem("mudguard", mudguard.value);
-		localStorage.setItem("handlebars", handlebars.value); */
+			localStorage.setItem("date", date.value);
+			
+			date.value = "";
+			brakes.value = "";
+			chain.value = "";
+			seats.value = "";
+			handlebars.value = "";
 		
-		name.value = "";
-		email.value = "";
-		birthday.value = "";
-		brakes.value = "";
-		tires.value = "";
-		gears.value = "";
-		seats.value = "";
-		wheels.value = "";
-		mudguard.value = "";
-		handlebars.value = "";
-		
-		Console.log("Successfully Saved Data to the local storage.")
+		console.log("Successfully Saved Data to the local storage.")
 		alert("Your data was saved successfully.");
 	}
 	catch (e)
@@ -175,47 +128,25 @@ function save()
 			alert("Error: Local Storage limit exceeded.");
 			localStorage.clear();
 			console.log("Error: Local Storage limit exceeded.");
-			
 		}
-/* 		else
-		{
-			console.log("Error: Saving to Local Storage.");
-			alert("Error: Saving to Local Storage.");
-			localStorage.clear();
-		} */
 	}
 }
 
 
-
-
-
-
 function request()
 {	
-	var name = document.getElementById("name");
-	var email = document.getElementById("email");
-	var birthday = document.getElementById("birthday");
+	var date = document.getElementById("date");
 	var brakes = document.getElementById("brakes");
-	var tires = document.getElementById("tires");
-	var gears = document.getElementById("gears");
 	var seats = document.getElementById("seats");
-	var wheels = document.getElementById("wheels");
-	var mudguard = document.getElementById("mudguard");
+	var chain = document.getElementById("chain");
 	var handlebars = document.getElementById("handlebars");
 	
-	name.value = localStorage.getItem("name", name.value);
-	email.value = localStorage.getItem("email", email.value);
-	birthday.value = localStorage.getItem("birthday", birthday.value);
+	date.value = localStorage.getItem("date", date.value);
 	brakes.value = localStorage.getItem("brakes", brakes.value);
-	tires.value = localStorage.getItem("tires", tires.value);
-	gears.value = localStorage.getItem("gears", gears.value);
 	seats.value = localStorage.getItem("seats", seats.value);
-	wheels.value = localStorage.getItem("wheels", wheels.value);
-	mudguard.value = localStorage.getItem("mudguard", mudguard.value);
+	chain.value = localStorage.getItem("chain", chain.value);
 	handlebars.value = localStorage.getItem("handlebars", handlebars.value);
 	
-	console.log("Getting your data from local storage");
 	alert("Your data was successfully requested from data storage.");
 }
 
