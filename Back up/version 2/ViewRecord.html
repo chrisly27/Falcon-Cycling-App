@@ -1,0 +1,218 @@
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="left"><a href="#" class="back link icon-only"><i class="icon icon-back"></i></a></div>
+	</div>
+</div>
+
+<!-- <div class="pages">
+	<div data-page="Safety" class="page">
+	<div class="content-block-inner">
+		<table align="center">
+			<tr><td>Name:</td><td><input type="text" id="name"></label></td></tr>
+			<tr><td>Email:</td><td><input type="text" id="email"></tr>
+			<tr><td>D.O.B:</td><td><input type="text" id="birthday"></tr>
+			
+			
+			<tr><td>Brakes:</td><td><input type="text" id="brakes"></tr>
+			<tr><td>Tires:</td><td><input type="text" id="tires"></tr>
+			<tr><td>Gears:</td><td><input type="text" id="gears"></tr>
+			<tr><td>Seats:</td><td><input type="text" id="seats"></tr>
+			<tr><td>Wheels:</td><td><input type="text" id="wheels"></tr>
+			<tr><td>Mudguard:</td><td><input type="text" id="mudguard"></tr>
+			<tr><td>Handlebars:</td><td><input type="text" id="handlebars"></tr>
+			
+			
+			<td>&nbsp;</td>
+			<tr><td><input type="button" id="get" value="Get from Storage" onclick="Javascript:request()"></td></tr>
+			<td>&nbsp;</td>
+			<tr><td><a href="index.html"><input type="button" id="add" value="Update to Storage" onclick="Javascript:save()"></a></td></tr>
+		
+		
+		</table>
+	</div>
+	</div>
+</div> -->
+
+
+
+
+
+
+
+<div class="pages">
+
+	<div data-page="form" class="page">
+<form data-search-list=".virtual-list" class="searchbar searchbar-init searchbar-active">
+<div class="searchbar-input">
+<input type="search" placeholder="Search" class=""><a href="#" class="searchbar-clear"></a>
+</div>
+</form>
+<div class="searchbar-overlay></div>
+	
+		<div class="page-content">
+			<div class="content-block-title">Select Details Below:</div>
+
+			<div class="list-block">
+			
+			
+		<div class="list-block virtual-list searchbar-found media-list">
+		</br>
+			<!-- <ul style="height:100%">
+				<li style="top: 0px;">
+					<a href="#" class="item-link item-content">
+						<div class="item-inner">
+							<div class="item-title-row">
+								<div class="item-title">Item 1</div>
+							</div>
+							<div class="item-subtitle">Subtitle 1</div>
+						</div>
+					</a>
+				</li>
+				<li style="top: 0px;">
+					<a href="#" class="item-link item-content">
+						<div class="item-inner">
+							<div class="item-title-row">
+								<div class="item-title">Item 2</div>
+							</div>
+							<div class="item-subtitle">Subtitle 2</div>
+						</div>
+					</a>
+				</li>
+				<li style="top: 0px;">
+					<a href="#" class="item-link item-content">
+						<div class="item-inner">
+							<div class="item-title-row">
+								<div class="item-title">Item 3</div>
+							</div>
+							<div class="item-subtitle">Subtitle 3</div>
+						</div>
+					</a>
+				</li>
+				<li style="top: 0px;">
+					<a href="#" class="item-link item-content">
+						<div class="item-inner">
+							<div class="item-title-row">
+								<div class="item-title">Item 4</div>
+							</div>
+							<div class="item-subtitle">Subtitle 4</div>
+						</div>
+					</a>
+				</li>
+				<li style="top: 0px;">
+					<a href="#" class="item-link item-content">
+						<div class="item-inner">
+							<div class="item-title-row">
+								<div class="item-title">Item 5</div>
+							</div>
+							<div class="item-subtitle">Subtitle 5</div>
+						</div>
+					</a>
+				</li>
+			</ul> -->
+	
+		</div>
+		
+<div class="list-block searchbar-not-found">
+<ul>
+<li class="item-content">
+<div class="item-inner">
+<div class="item-title">Nothing found</div>
+</div>
+</li>
+</ul>
+</div>
+			
+			
+			
+			
+				<ul>
+					<li>
+						<div class="item-content">
+							<div class="item-media"><i class="icon icon-form-calendar"></i></div>
+							<div class="item-inner">
+								<div class="item-title label">Date</div>
+								<div class="item-input">
+									<input type="date" placeholder="Your birthday Data" readonly value="2016-04-28" id="date">
+								</div>
+							</div>
+						</div>
+					</li> 
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="text" readonly id="brakes">
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="text" readonly id="chain">
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="text" readonly id="seats">
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="text" readonly id="handlebars">
+						</label>
+					</li>
+		
+					
+				</ul>
+				
+				
+				
+				<div class="item-inner not-empty-state">
+					<div class="item-title label">&nbsp;&nbsp;&nbsp;Record Data</div>
+					<div class="item-input item-input-field not-empty-state">
+						<textarea name="about-me" class="resizable not-empty-state" style="height:200px;" id="allData"></textarea>
+					</div>
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			
+			
+			
+			<div class="content-block">
+				<div class="row">
+					<div 	class="col-50"><a href="index.html" class="button button-big button-fill color-red">Homepage</a></div>
+					<div 	class="col-50"><!-- <a href="index.html"> --><input type="button" id="add" value="Request Data" 
+							class="button button-big button-fill color-green" onclick="Javascript:request()"><!-- </a> --></div>
+				</div>
+			</div>
+
+
+
+
+		</div>
+	</div>	
+	
+	
+	
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
