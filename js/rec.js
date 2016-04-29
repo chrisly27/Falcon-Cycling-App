@@ -66,7 +66,54 @@ function addEntry() {
 function save()
 {
 	
-	// Parse any JSON previously stored in allEntries
+		// Parse any JSON previously stored in allEntries
+		var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
+		if(existingEntries == null) existingEntries = [];
+		
+		var date = document.getElementById("date").value;
+		var brakes = document.getElementById("brakes").value;
+		var chain = document.getElementById("chain").value;
+		var seats = document.getElementById("seats").value;
+		var handlebars = document.getElementById("handlebars").value;
+		
+		var entry =
+		{
+			"date": date,
+			"brakes": brakes,
+			"chain": chain,
+			"seats": seats,
+			"handlebars": handlebars
+		};
+		
+		localStorage.setItem("entry", JSON.stringify(entry));
+		// Save allEntries back to local storage
+		existingEntries.push(entry);
+		localStorage.setItem("allEntries", JSON.stringify(existingEntries));
+	
+		console.log("It's me again here");
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/*// Parse any JSON previously stored in allEntries
     var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
     if(existingEntries == null) existingEntries = [];
     var date = document.getElementById("date").value;
@@ -87,18 +134,17 @@ function save()
     existingEntries.push(entry);
     localStorage.setItem("allEntries", JSON.stringify(existingEntries));
 	
-	console.log("It's me again here");
+	console.log("It's me again here");*/
 	
 	
-	
-	/* var date = document.getElementById("date");
+	var date = document.getElementById("date");
 	var brakes = document.getElementById("brakes"); 	 
 	var seats = document.getElementById("seats");
 	var chain = document.getElementById("chain");
 	var handlebars = document.getElementById("handlebars");
+
 	
-	
-	try
+ 	/*try
 	{
 			if($('#brakes').prop('checked'))
 			{
@@ -155,20 +201,18 @@ function save()
 			localStorage.clear();
 			console.log("Error: Local Storage limit exceeded.");
 		}
-	} */
+	}*/
 }
 
 
 function request()
 {	
-	var date = document.getElementById("date");
+	/* var date = document.getElementById("date");
 	var brakes = document.getElementById("brakes");
 	var seats = document.getElementById("seats");
 	var chain = document.getElementById("chain");
 	var handlebars = document.getElementById("handlebars");
 
-/* 	var meClever = " "; 
-	meClever(getAllIds("date brakes seats chain handlebars")); */
 
 	date.value = localStorage.getItem("date", date.value);
  	brakes.value = localStorage.getItem("brakes", brakes.value);
@@ -176,25 +220,29 @@ function request()
 	chain.value = localStorage.getItem("chain", chain.value);
 	handlebars.value = localStorage.getItem("handlebars", handlebars.value);
 	
-	alert("Your data was successfully requested from data storage.");
+	alert("Your data was successfully requested from data storage."); */
+	
+	
+ 	for (var i = 0, len = localStorage.length; i < len; ++i)
+	{
+		/* myApp.alert(localStorage.getItem(localStorage.key(i)));  */
+		document.getElementById("allData").value = localStorage.getItem(localStorage.key(i));
+	}
+	
+	
+	var obj = JSON.parse(localStorage.getItem('entry'));
+
+    document.getElementById("date").value = obj.date;
+    document.getElementById("brakes").value = obj.brakes;
+    document.getElementById("chain").value = obj.chain;
+    document.getElementById("seats").value = obj.seats;
+    document.getElementById("handlebars").value = obj.handlebars;
+	 
+	
+	
+	
+	
 }
-
-
-function getAllIds(id)
-{
-    const elementsWithId = []
-    const allElements = document.getElementsByTagName('*')
-    for(let key in allElements) {
-        if(allElements.hasOwnProperty(key)) {
-            const element = allElements[key]
-            if(element.id === id) {
-                elementsWithId.push(element)
-            }        
-        }
-    }
-    return elementsWithId
-}
-
 
 
 
