@@ -67,8 +67,8 @@ function save()
 {
 	
 		// Parse any JSON previously stored in allEntries
-		var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
-		if(existingEntries == null) existingEntries = [];
+		/* var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
+		if(existingEntries == null) existingEntries = []; 
 		
 		var date = document.getElementById("date").value;
 		var brakes = document.getElementById("brakes").value;
@@ -88,28 +88,23 @@ function save()
 		localStorage.setItem("entry", JSON.stringify(entry));
 		// Save allEntries back to local storage
 		existingEntries.push(entry);
-		localStorage.setItem("allEntries", JSON.stringify(existingEntries));
+		
+		var b = new Date().getTime();
+		
+		localStorage.setItem(b, JSON.stringify(existingEntries));
 	
-		console.log("It's me again here");
+		console.log("It's me again here"); */
 	
+		var date = document.getElementById("date").value;
+		var brakes = document.getElementById("brakes").value;
+		var chain = document.getElementById("chain").value;
+		var seats = document.getElementById("seats").value;
+		var handlebars = document.getElementById("handlebars").value;
+		
+		var c = new Date().getTime();
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		var b = {'date': date, 'brakes': brakes, 'chain': chain, 'seats': seats, 'handlebars': handlebars};
+		localStorage.setItem(c, JSON.stringify(b));
 	
 	
 	
@@ -137,11 +132,11 @@ function save()
 	console.log("It's me again here");*/
 	
 	
-	var date = document.getElementById("date");
+	/* var date = document.getElementById("date");
 	var brakes = document.getElementById("brakes"); 	 
 	var seats = document.getElementById("seats");
 	var chain = document.getElementById("chain");
-	var handlebars = document.getElementById("handlebars");
+	var handlebars = document.getElementById("handlebars"); */
 
 	
  	/*try
@@ -223,31 +218,49 @@ function request()
 	alert("Your data was successfully requested from data storage."); */
 	
 	
- 	for (var i = 0, len = localStorage.length; i < len; ++i)
+ 	/* for (var i = 0, len = localStorage.length; i < len; ++i)
 	{
-		/* myApp.alert(localStorage.getItem(localStorage.key(i)));  */
-		document.getElementById("allData").value = localStorage.getItem(localStorage.key(i));
-	}
+		/* myApp.alert(localStorage.getItem(localStorage.key(i)));  
+		document.getElementById("allData").innerHTML += localStorage.getItem(localStorage.key(i));
+	} */
 	
 	
-	var obj = JSON.parse(localStorage.getItem('entry'));
+	/* var obj = JSON.parse(localStorage.getItem('entry'));
 
     document.getElementById("date").value = obj.date;
     document.getElementById("brakes").value = obj.brakes;
     document.getElementById("chain").value = obj.chain;
     document.getElementById("seats").value = obj.seats;
-    document.getElementById("handlebars").value = obj.handlebars;
+    document.getElementById("handlebars").value = obj.handlebars; */
 	 
 	
+	/* var get = localStorage.getItem('b');
+	
+	alert('get ', JSON.parse(get)); */
 	
 	
 	
+	
+	for (var i = 0, len = localStorage.length; i < len; ++i)
+	{
+		/* myApp.alert(localStorage.getItem(localStorage.key(i))); */ 
+		/* document.getElementById("allData").innerHTML += localStorage.getItem(localStorage.key(i)); */
+		
+		var get = localStorage.getItem(localStorage.key(i));
+		//myApp.alert(localStorage.getItem(localStorage.key(i)));
+		
+		 var getp = JSON.parse(get) 
+		/* console.log(get, JSON.parse(get)); */
+		console.log(getp);
+		
+		$.each(getp, function(key, value)
+		{
+			/* console.log(key, value); */
+			/* myApp.alert(value); */
+			document.getElementById('me').innerHTML += (key, " ", value);
+		});
+	}
 }
-
-
-
-
-
 
 
 
