@@ -1,41 +1,84 @@
-<div class="navbar">
+<div data-page="swipe-delete" class="page">
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="left">
+				<a href="index.html" class="back link icon-only">
+					<i class="icon icon-back"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="page-content">
+	<br></br>
+    <div class="content-block-title"><p>Click on request button to view all the</br> data you saved.</p></div>
+    <div class="list-block">
+	
+	<ul>
+		<li>
+			<textarea rows="12" cols="100" id="data"></textarea>
+		</li>
+	</ul>  
+	  
+	<br></br><br></br>
+	<div class="content-block">
+		<div class="row">					
+			<div 	class="col-50"><input type="button" id="clean" value="Delete All Data" 
+					class="button button-big button-fill color-red" onclick="Javascript:ClearStorage()"></div>
+							
+							
+			<div 	class="col-50"><input type="button" id="add" value="Request Data" 
+					class="button button-big button-fill color-green" onclick="Javascript:request()"></div>
+		</div>
+	</div>
+			
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="navbar">
 	<div class="navbar-inner">
 		<div class="left"><a href="#" class="back link icon-only"><i class="icon icon-back"></i></a></div>
 	</div>
 </div>
-
-<!-- <div class="pages">
-	<div data-page="Safety" class="page">
-	<div class="content-block-inner">
-		<table align="center">
-			<tr><td>Name:</td><td><input type="text" id="name"></label></td></tr>
-			<tr><td>Email:</td><td><input type="text" id="email"></tr>
-			<tr><td>D.O.B:</td><td><input type="text" id="birthday"></tr>
-			
-			
-			<tr><td>Brakes:</td><td><input type="text" id="brakes"></tr>
-			<tr><td>Tires:</td><td><input type="text" id="tires"></tr>
-			<tr><td>Gears:</td><td><input type="text" id="gears"></tr>
-			<tr><td>Seats:</td><td><input type="text" id="seats"></tr>
-			<tr><td>Wheels:</td><td><input type="text" id="wheels"></tr>
-			<tr><td>Mudguard:</td><td><input type="text" id="mudguard"></tr>
-			<tr><td>Handlebars:</td><td><input type="text" id="handlebars"></tr>
-			
-			
-			<td>&nbsp;</td>
-			<tr><td><input type="button" id="get" value="Get from Storage" onclick="Javascript:request()"></td></tr>
-			<td>&nbsp;</td>
-			<tr><td><a href="index.html"><input type="button" id="add" value="Update to Storage" onclick="Javascript:save()"></a></td></tr>
-		
-		
-		</table>
-	</div>
-	</div>
-</div> -->
-
-
-
-
 
 
 
@@ -57,58 +100,7 @@
 			
 		<div class="list-block virtual-list searchbar-found media-list">
 		</br>
-			<!-- <ul style="height:100%">
-				<li style="top: 0px;">
-					<a href="#" class="item-link item-content">
-						<div class="item-inner">
-							<div class="item-title-row">
-								<div class="item-title">Item 1</div>
-							</div>
-							<div class="item-subtitle">Subtitle 1</div>
-						</div>
-					</a>
-				</li>
-				<li style="top: 0px;">
-					<a href="#" class="item-link item-content">
-						<div class="item-inner">
-							<div class="item-title-row">
-								<div class="item-title">Item 2</div>
-							</div>
-							<div class="item-subtitle">Subtitle 2</div>
-						</div>
-					</a>
-				</li>
-				<li style="top: 0px;">
-					<a href="#" class="item-link item-content">
-						<div class="item-inner">
-							<div class="item-title-row">
-								<div class="item-title">Item 3</div>
-							</div>
-							<div class="item-subtitle">Subtitle 3</div>
-						</div>
-					</a>
-				</li>
-				<li style="top: 0px;">
-					<a href="#" class="item-link item-content">
-						<div class="item-inner">
-							<div class="item-title-row">
-								<div class="item-title">Item 4</div>
-							</div>
-							<div class="item-subtitle">Subtitle 4</div>
-						</div>
-					</a>
-				</li>
-				<li style="top: 0px;">
-					<a href="#" class="item-link item-content">
-						<div class="item-inner">
-							<div class="item-title-row">
-								<div class="item-title">Item 5</div>
-							</div>
-							<div class="item-subtitle">Subtitle 5</div>
-						</div>
-					</a>
-				</li>
-			</ul> -->
+
 	
 		</div>
 		
@@ -192,8 +184,8 @@
 			<div class="content-block">
 				<div class="row">
 					<div 	class="col-50"><a href="index.html" class="button button-big button-fill color-red">Homepage</a></div>
-					<div 	class="col-50"><!-- <a href="index.html"> --><input type="button" id="add" value="Request Data" 
-							class="button button-big button-fill color-green" onclick="Javascript:request()"><!-- </a> --></div>
+					<div 	class="col-50"><!-- <a href="index.html"> --<input type="button" id="add" value="Request Data" 
+							class="button button-big button-fill color-green" onclick="Javascript:request()"><!-- </a> --</div>
 				</div>
 			</div>
 
@@ -223,3 +215,4 @@
 
 
 
+ -->
