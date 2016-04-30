@@ -23,15 +23,6 @@ function isQuotaExceeded(e) {
 
 
 
-/* function appendToStorage(name, data){
-    var old = localStorage.getItem(name);
-    if(old === null) old = "";
-    localStorage.setItem(name, old + data);
-}
-
-appendToStorage('oldData', $i("textbox").value); */
-
-
 function save()
 {
 	try
@@ -106,8 +97,6 @@ function request()
 		});
 	}
 }
-
-
 
 
 function ClearStorage()
