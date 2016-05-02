@@ -1,0 +1,38 @@
+[
+	{
+		"id": 1,
+		"component": "Brakes",
+		"image": "brake.jpg",
+		"check": "Keep watching the wear line which will help you with the brake pads.",
+		"change": "Use the chain splitter, push one of the pins out of the lower stretch of chain or undo the quick link if one is installed. Once you've extracted the pin, carefully remove the chain from the bike.",
+		"adjusting": "You might need to increase only the tension on brake cables. Most brakes have a cable adjuster on the brake itself, just by where the cable is attached. Unscrew the threaded bolt with your fingers to bring the brakes closer to the rim.",
+		"video": "http://i1.adis.ws/v/washford/video_advice_cycling_Workshop_0011/mp4_480p"
+	},
+	{
+		"id": 2,
+		"component": "Chain",
+		"image": "chain.jpg",
+		"check": "Make sure you note of this checklist: Chain lube, new chain, cloth or rag, chain tool.",
+		"change": "Remove the tension from the chain by shifting to the inner chainring and sprocket. Remove the chain by hand but the link should not be removed.",
+		"adjusting": "Its good to match the manufacture of the chain with the bike as well as you must have the correct chain length. Pull the chain together until it is derailleur comes into tension, if the chain is too long then you may consider removing a few links on it but make sure you have male and female at end at opposition ends. When finish.",
+		"video": "https://www.youtube.com/embed/d0k64OuwSqo"
+	},
+	{
+		"id": 3,
+		"component": "Handbars",
+		"image": "handbars.jpg",
+		"check": "Make sure you note of this checklist: Hex key, handbars and torque wrench. Before remove the old handbard take the distance from the ground to the handhard, to give you the bar height.",
+		"change": "Use hex key to loose the brake hood as you loose the bolt, which the shift will become loose from the handbars. Loose the stem bolts, which then you will remove the old handbar.",
+		"adjusting": "Place the new handbar on your stem then place the stem plate over the handbar and screw the bolts back until tight. Then put back the brake and tight them as well.",
+		"video": "https://www.youtube.com/embed/Ir-Or1xszMQ"
+	},
+	{
+		"id": 4,
+		"component": "Seat",
+		"image": "seat.jpg",
+		"check": "Make sure you have the correct seat and size if required and give the same manufacture.",
+		"change": "Turn your bike up and locate the saddle clpam under the seat, loose the seatscrews then remove the old seat.",
+		"adjusting": "Place the new seat then screw it tight and the test the bike for a few minutes to make sure it is safe.",
+		"video": "https://www.youtube.com/embed/BfnM0eyjB5Q"
+	}
+]
