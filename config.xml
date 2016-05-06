@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+	<widget
+		xmlns 		= "http://www.w3.org/ns/widgets"
+		xmlns:gap 	= "http://phonegap.com/ns/1.0"
+		id        	= "com.phonegap.example"
+		versionCode = "10"
+		version 	= "1.0.0">
+	
+	
+		<!--versionCode is optional and Android only -->
+	
+		<name>Falcon Club</name>
+	
+		<description>
+			Falcon Club application is here to help you to maintain your bike safe.
+		</description>
+	
+		<icon src="icon.png" platform="android" width="180" height="180"/>
+	
+	</widget>
