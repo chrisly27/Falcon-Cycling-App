@@ -101,17 +101,17 @@ function request()
 
 function ClearStorage()
 {	
-	var r = confirm("Are you sure you want to delete\n all data from data storage??");
+	var r = confirm("Are you sure you want to delete\n all data from data storage?");
 	
 	if (r == true)
 	{
 		localStorage.clear();
-		alert("All data was delele successfully.");
-		location.reload();
+		myApp.alert("All data was delele successfully.");
+		/* location.reload(); */
 	}
 	else
 	{
-		alert("You canceled the process of clearing \ndata storage. Thanks");
-		location.reload();
+		myApp.alert("You canceled the process of clearing \ndata storage. Thanks");
+		/* location.reload(); */
 	}
 }
